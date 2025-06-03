@@ -1,7 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 
-const Contact: React.FC = () => {
+const Contact = () => {
   return (
     <section id='contact' className='px-4 sm:px-8 lg:px-16 py-16'>
       <motion.div

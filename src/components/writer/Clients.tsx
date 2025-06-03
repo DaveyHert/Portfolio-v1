@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 interface TestimonialProps {
@@ -11,7 +10,7 @@ interface TestimonialProps {
   delay: number;
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({
+const Testimonial = ({
   company,
   type,
   quote,
@@ -19,7 +18,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   initial,
   bgColor,
   delay,
-}) => {
+}: TestimonialProps) => {
   return (
     <motion.div
       className='bg-neutral-100 p-6 rounded-xl'
@@ -47,7 +46,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   );
 };
 
-const Clients: React.FC = () => {
+const Clients = () => {
   const testimonials = [
     {
       company: "ContentLabs",
@@ -71,7 +70,7 @@ const Clients: React.FC = () => {
     },
   ];
 
-  const clients = ["CLIENT 1", "CLIENT 2", "CLIENT 3", "CLIENT 4", "CLIENT 5"];
+  // const clients = ["CLIENT 1", "CLIENT 2", "CLIENT 3", "CLIENT 4", "CLIENT 5"];
 
   return (
     <section id='clients' className='px-4 sm:px-8 lg:px-16 py-16 bg-white'>

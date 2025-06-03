@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 interface ProjectCardProps {
@@ -31,9 +30,7 @@ const ProjectCard = ({
       <div
         className={`h-48 ${thumbnail ? "bg-cover bg-no-repeat" : "bg-[#3a148c]" } bg-opacity-30 relative overflow-hidden`} //prettier-ignore
         style={{ backgroundImage: thumbnail ? `url(${thumbnail})` : "" }}
-      >
-        {/* <div className='absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent'></div> */}
-      </div>
+      ></div>
       <div className='p-6'>
         <div className='flex items-center justify-between mb-3'>
           <h3 className='text-xl font-poppins font-medium text-white'>
@@ -67,7 +64,7 @@ const ProjectCard = ({
   );
 };
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const projects = [
     {
       title: "Varxell Team - Creative Design",

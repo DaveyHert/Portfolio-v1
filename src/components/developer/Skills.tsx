@@ -7,7 +7,7 @@ interface SkillBarProps {
   delay: number;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ name, percentage, delay }) => {
+const SkillBar = ({ name, percentage, delay }: SkillBarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
@@ -38,12 +38,7 @@ interface OtherSkillProps {
   delay: number;
 }
 
-const OtherSkill: React.FC<OtherSkillProps> = ({
-  icon,
-  title,
-  subtitle,
-  delay,
-}) => {
+const OtherSkill = ({ icon, title, subtitle, delay }: OtherSkillProps) => {
   return (
     <motion.div
       className='bg-neutral-700 bg-opacity-30 p-4 rounded-lg flex items-center'
@@ -63,7 +58,7 @@ const OtherSkill: React.FC<OtherSkillProps> = ({
   );
 };
 
-const Skills: React.FC = () => {
+const Skills = () => {
   const skills = [
     { name: "React", percentage: 90, delay: 0.1 },
     { name: "TypeScript", percentage: 85, delay: 0.2 },
